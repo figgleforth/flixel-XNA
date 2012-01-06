@@ -18,7 +18,6 @@ namespace fliXNA_xbox
 
         private Player p;
         private Follower f;
-        private FlxText t;
 
         public override void create()
         {
@@ -30,11 +29,7 @@ namespace fliXNA_xbox
             f = new Follower(p);
             add(f);
 
-            t = new FlxText(400, 400, 500, "hello");
-            t.setFormat(FlxColor.WHITE, 2.0f);
-            add(t);
-
-            //FlxG.camera.follow(p, FlxCamera.STYLE_TOPDOWN);
+            FlxG.camera.follow(p, FlxCamera.STYLE_TOPDOWN);
 
         }
 

@@ -26,12 +26,14 @@ namespace fliXNA_xbox
             x = P.x;
             y = P.y;
             makeGraphic(30, 30, FlxColor.LIME);
-            followPath(follow, 50, FlxObject.PATH_YOYO);
+            followPath(follow, 75, FlxObject.PATH_FORWARD);
+            //stopFollowingPath();
         }
 
         public override void update()
         {
             base.update();
+
 
 
 
