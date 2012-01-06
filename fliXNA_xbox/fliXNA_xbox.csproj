@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{AE6D6EFE-5B1F-4189-A218-A2B62DA2B102}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fliXNA_xbox</RootNamespace>
+    <AssemblyName>fliXNA_xbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>078f2acd-7afa-4d22-a795-ac272b2a2967</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fliXNA\system\FlxAnim.cs" />
+    <Compile Include="fliXNA\FlxBasic.cs" />
+    <Compile Include="fliXNA\FlxCamera.cs" />
+    <Compile Include="fliXNA\system\FlxColor.cs" />
+    <Compile Include="fliXNA\system\FlxConsole.cs" />
+    <Compile Include="fliXNA\FlxEmitter.cs" />
+    <Compile Include="fliXNA\FlxG.cs" />
+    <Compile Include="fliXNA\system\FlxGame.cs" />
+    <Compile Include="fliXNA\system\FlxGamepad.cs" />
+    <Compile Include="fliXNA\FlxGroup.cs" />
+    <Compile Include="fliXNA\system\FlxKeyboard.cs" />
+    <Compile Include="fliXNA\system\FlxList.cs" />
+    <Compile Include="fliXNA\system\FlxMouse.cs" />
+    <Compile Include="fliXNA\FlxObject.cs" />
+    <Compile Include="fliXNA\FlxParticle.cs" />
+    <Compile Include="fliXNA\FlxPath.cs" />
+    <Compile Include="fliXNA\FlxPoint.cs" />
+    <Compile Include="fliXNA\system\FlxQuadTree.cs" />
+    <Compile Include="fliXNA\FlxRect.cs" />
+    <Compile Include="fliXNA\FlxSound.cs" />
+    <Compile Include="fliXNA\FlxSprite.cs" />
+    <Compile Include="fliXNA\FlxState.cs" />
+    <Compile Include="fliXNA\FlxText.cs" />
+    <Compile Include="fliXNA\FlxTile.cs" />
+    <Compile Include="fliXNA\FlxTilemap.cs" />
+    <Compile Include="fliXNA\FlxU.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="source\CameraHelper.cs" />
+    <Compile Include="source\Driller.cs" />
+    <Compile Include="source\FlxTileblock.cs" />
+    <Compile Include="source\Follower.cs" />
+    <Compile Include="source\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="source\TitleState.cs" />
+    <Compile Include="source\ZeldaCam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\fliXNA_xboxContent\fliXNA_xboxContent.contentproj">
+      <Name>fliXNA_xboxContent</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
