@@ -4,3 +4,5 @@ c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fli
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\obj\Xbox 360\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\obj\Xbox 360\Debug\fliXNA_xbox.exe
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\obj\Xbox 360\Debug\fliXNA_xbox.pdb
+c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\ConsoleFont.xnb
+c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\default.xnb
