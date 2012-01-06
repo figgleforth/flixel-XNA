@@ -82,8 +82,7 @@ namespace fliXNA_xbox
                     //FlxG.log(FlxU.getDistance(_currPos, _lastPos));
                     _lastPos.make(x, y) ;
                     _nodes.Add(_lastPos);
-                    //FlxG.shake(0.01f, 0.1f);
-                    FlxG.log("+node at ("+_currPos.x+", "+_currPos.y+")");
+                    //FlxG.log("+node at ("+_currPos.x+", "+_currPos.y+")");
                 }
                 makePathTimer = 0;
             }

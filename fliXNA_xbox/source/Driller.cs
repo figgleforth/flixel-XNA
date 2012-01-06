@@ -17,7 +17,6 @@ namespace fliXNA_xbox
     {
 
         private Player p;
-        private Follower f;
 
         public override void create()
         {
@@ -26,8 +25,6 @@ namespace fliXNA_xbox
             p = new Player(200, 200);
             add(p);
 
-            f = new Follower(p);
-            add(f);
 
             FlxG.camera.follow(p, FlxCamera.STYLE_TOPDOWN);
 
