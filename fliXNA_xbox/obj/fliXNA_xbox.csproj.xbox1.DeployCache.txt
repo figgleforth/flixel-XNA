@@ -6,8 +6,10 @@ c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fli
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\GameThumbnail.png
 2012-01-06T23:09:14.4873047Z
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\fliXNA_xbox.exe
-2012-01-06T23:45:07.5019531Z
+2012-01-08T02:33:34.1259765Z
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\ConsoleFont.xnb
 2012-01-06T23:19:32.2509765Z
 c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\default.xnb
 2012-01-06T23:18:07.2353515Z
+c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\footsteps.xnb
+2012-01-08T01:42:22.0029297Z

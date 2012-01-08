@@ -67,6 +67,21 @@ namespace fliXNA_xbox
         }
 
         /// <summary>
+        /// Destroy all objects in the group
+        /// </summary>
+        public override void destroy()
+        {
+            base.destroy();
+            if (members.Count != 0)
+            {
+                foreach (FlxBasic m in members)
+                {
+                    m.destroy();
+                }
+            }
+        }
+
+        /// <summary>
         /// Kill all objects in the group
         /// </summary>
         override public void kill()

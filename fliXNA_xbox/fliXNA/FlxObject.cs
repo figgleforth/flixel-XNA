@@ -314,6 +314,8 @@ namespace fliXNA_xbox
             mass = 1.0f;
             elasticity = 0.0f;
 
+            health = 1;
+
             immovable = false;
             moves = true;
 

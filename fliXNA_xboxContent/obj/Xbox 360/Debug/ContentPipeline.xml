@@ -19,6 +19,15 @@
       <Output>c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\default.xnb</Output>
       <Time>2012-01-06T18:18:03.305664-05:00</Time>
     </Item>
+    <Item>
+      <Source>footsteps.png</Source>
+      <Name>footsteps</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\footsteps.xnb</Output>
+      <Time>2012-01-07T20:42:19.7041015-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Xbox360</TargetPlatform>

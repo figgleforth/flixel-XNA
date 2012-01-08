@@ -144,11 +144,11 @@ namespace fliXNA_xbox
         ///// <param name="Min"></param>
         ///// <param name="Max"></param>
         ///// <returns></returns>
-        //internal static float randomBetween(int Min, int Max)
-        //{
-        //    Random r = new Random();
-        //    return (float)r.Next(Min, Max);
-        //}
+        internal static float randomBetween(int Min, int Max)
+        {
+            Random r = new Random();
+            return (float)r.Next(Min, Max);
+        }
 
         /// <summary>
         /// Distance between two FlxPoints

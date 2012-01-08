@@ -25,6 +25,11 @@ namespace fliXNA_xbox
         {
         }
 
+        public void show()
+        {
+           
+        }
+
         public void update()
         {
             old = current;

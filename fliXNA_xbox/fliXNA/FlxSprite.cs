@@ -51,7 +51,6 @@ namespace fliXNA_xbox
         public FlxSprite(float X = 0, float Y = 0, Texture2D Graphic = null)
             : base(X, Y)
         {
-            health = 1.0f;
             scale = new FlxPoint(1.0f, 1.0f);
             offset = new FlxPoint();
             origin = new FlxPoint();

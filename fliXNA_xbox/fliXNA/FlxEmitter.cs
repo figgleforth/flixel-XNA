@@ -269,12 +269,16 @@ namespace fliXNA_xbox
 		 */
 		public void emitParticle()
 		{
+            FlxPoint t = target.getMidpoint();
 			FlxParticle particle = recycle(typeof(FlxBasic)) as FlxParticle;
             particle.minSpeed = minParticleSpeed;
             particle.maxSpeed = maxParticleSpeed;
 			particle.lifespan = lifespan;
 			particle.elasticity = bounce;
-			particle.reset(x - (Convert.ToInt32(particle.width)>>1) + FlxG.random()*width, y - (Convert.ToInt32(particle.height)>>1) + FlxG.random()*height);
+            if(target!=null)
+                particle.reset(t.x, t.y);
+            else
+			    particle.reset(x - (Convert.ToInt32(particle.width)>>1) + FlxG.random()*width, y - (Convert.ToInt32(particle.height)>>1) + FlxG.random()*height);
 			particle.visible = true;
 			particle.drag.x = particleDrag.x;
 			particle.drag.y = particleDrag.y;

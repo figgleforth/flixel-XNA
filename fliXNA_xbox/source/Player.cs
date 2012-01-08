@@ -21,6 +21,7 @@ namespace fliXNA_xbox
         private List<FlxPoint> _nodes;
         private FlxPoint _currPos;
         private FlxPoint _lastPos;
+        public FlxEmitter footsteps;
 
         public Player(int X = 0, int Y = 0)
             : base(X, Y)
@@ -35,6 +36,11 @@ namespace fliXNA_xbox
             _nodes.Add(_lastPos);
             _nodes.Add(_currPos);
             _path = new FlxPath(_nodes);
+
+            footsteps = new FlxEmitter(x + width / 2, y + height / 2, 0, this);
+            footsteps.makeParticles(FlxG.content.Load<Texture2D>("footsteps"), true, 25, 0f, 0f);
+            footsteps.setXSpeed();
+            footsteps.setYSpeed();
         }
 
         public override void update()
@@ -42,8 +48,7 @@ namespace fliXNA_xbox
             base.update();
             pathLogic();
 
-
-
+            //analog stick movement
             if (FlxG.pad1.leftAnalogPushedRight())
             {
                 facing = RIGHT;
@@ -54,8 +59,7 @@ namespace fliXNA_xbox
                 facing = LEFT;
                 velocity.x += (vel * FlxG.pad1.leftAnalogX);
             }
-
-            else if (FlxG.pad1.leftAnalogPushedUp())
+            if (FlxG.pad1.leftAnalogPushedUp())
             {
                 facing = UP;
                 velocity.y -= (vel * FlxG.pad1.leftAnalogY);
@@ -64,6 +68,28 @@ namespace fliXNA_xbox
             {
                 facing = DOWN;
                 velocity.y -= (vel * FlxG.pad1.leftAnalogY);
+            }
+
+            //dpad movement
+            if (FlxG.pad1.pressed(Buttons.DPadRight))
+            {
+                facing = RIGHT;
+                velocity.x += vel;
+            }
+            else if (FlxG.pad1.pressed(Buttons.DPadLeft))
+            {
+                facing = LEFT;
+                velocity.x -= vel;
+            }
+            if (FlxG.pad1.pressed(Buttons.DPadUp))
+            {
+                facing = UP;
+                velocity.y -= vel;
+            }
+            else if (FlxG.pad1.pressed(Buttons.DPadDown))
+            {
+                facing = DOWN;
+                velocity.y += vel;
             }
 
 
@@ -75,13 +101,14 @@ namespace fliXNA_xbox
 
             if (moving)
                 makePathTimer += FlxG.elapsed;
-            if (makePathTimer >= 3)
+            if (makePathTimer >= 0.3)
             {
-                if (FlxU.getDistance(_currPos, _lastPos) >= 10)
+                if (FlxU.getDistance(_currPos, _lastPos) >= 5)
                 {
                     //FlxG.log(FlxU.getDistance(_currPos, _lastPos));
                     _lastPos.make(x, y) ;
                     _nodes.Add(_lastPos);
+                    footsteps.emitParticle();
                     //FlxG.log("+node at ("+_currPos.x+", "+_currPos.y+")");
                 }
                 makePathTimer = 0;
