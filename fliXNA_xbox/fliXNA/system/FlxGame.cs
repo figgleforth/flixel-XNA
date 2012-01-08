@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -53,8 +54,13 @@ namespace fliXNA_xbox
             FlxG.viewport = FlxG.graphicsDevice.Viewport;
             FlxG.width = graphics.PreferredBackBufferWidth;
             FlxG.height = graphics.PreferredBackBufferHeight;
-            
+
+            //Thread tInit = new Thread(FlxG.init);
+            //tInit.Start();
+
             FlxG.init();
+
+            
         }
 
         /// <summary>
@@ -63,6 +69,7 @@ namespace fliXNA_xbox
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            //FlxG.gametime(gameTime);
             FlxG.update(gameTime);
         }
 
@@ -71,6 +78,8 @@ namespace fliXNA_xbox
         /// </summary>
         protected override void Draw(GameTime gameTime)
         {
+            //Thread d = new Thread(FlxG.state.draw);
+            //d.Start();
             FlxG.state.draw();
         }
     }

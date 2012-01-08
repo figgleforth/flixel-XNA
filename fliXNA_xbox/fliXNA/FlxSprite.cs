@@ -84,6 +84,29 @@ namespace fliXNA_xbox
             moving = false;
         }
 
+        public override void destroy()
+        {
+            if(_animations != null)
+			{
+				FlxAnim a;
+				int i = 0;
+				int l = _animations.Count;
+				while(i < l)
+				{
+					a = _animations[i++];
+					if(a != null)
+						a.destroy();
+				}
+				_animations = null;
+			}
+			
+			offset = null;
+			origin = null;
+			scale = null;
+			_curAnim = null;
+			_callback = null;
+        }
+
         public Color color
         {
             get { return _color; }

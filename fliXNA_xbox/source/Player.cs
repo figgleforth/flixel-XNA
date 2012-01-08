@@ -22,6 +22,7 @@ namespace fliXNA_xbox
         private FlxPoint _currPos;
         private FlxPoint _lastPos;
         public FlxEmitter footsteps;
+        private bool _indoors;
 
         public Player(int X = 0, int Y = 0)
             : base(X, Y)
@@ -41,6 +42,8 @@ namespace fliXNA_xbox
             footsteps.makeParticles(FlxG.content.Load<Texture2D>("footsteps"), true, 25, 0f, 0f);
             footsteps.setXSpeed();
             footsteps.setYSpeed();
+
+            _indoors = false;
         }
 
         public override void update()
@@ -108,7 +111,8 @@ namespace fliXNA_xbox
                     //FlxG.log(FlxU.getDistance(_currPos, _lastPos));
                     _lastPos.make(x, y) ;
                     _nodes.Add(_lastPos);
-                    footsteps.emitParticle();
+                    if(!_indoors)
+                        footsteps.emitParticle();
                     //FlxG.log("+node at ("+_currPos.x+", "+_currPos.y+")");
                 }
                 makePathTimer = 0;
@@ -118,6 +122,12 @@ namespace fliXNA_xbox
         public FlxPath getPath()
         {
             return _path;
+        }
+
+        public bool indoors
+        {
+            get { return _indoors; }
+            set { _indoors = value; }
         }
     }
 }

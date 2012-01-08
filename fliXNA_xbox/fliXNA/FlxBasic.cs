@@ -70,7 +70,10 @@ namespace fliXNA_xbox
         /// <summary>
         /// Override this to null out variables or manually call <code>destroy()</code> on class members.  Dont forget to call <code>base.destroy()</code>
         /// </summary>
-        public virtual void destroy() { }
+        public virtual void destroy()
+        {
+            position = null;
+        }
 
         /// <summary>
         /// Pre-update is called right before <code>update()</code>

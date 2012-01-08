@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -228,6 +229,12 @@ namespace fliXNA_xbox
             updateInputs();
         }
 
+        static internal void gametime(GameTime dt)
+        {
+            gameTime = dt;
+            elapsed = (float)dt.ElapsedGameTime.TotalSeconds;
+        }
+
         static internal void updateCameras()
         {
             foreach (FlxCamera c in FlxG.cameras)
@@ -391,6 +398,9 @@ namespace fliXNA_xbox
             FlxG.safeZone = new FlxRect(FlxG.graphicsDevice.Viewport.TitleSafeArea.X, FlxG.graphicsDevice.Viewport.TitleSafeArea.Y, FlxG.graphicsDevice.Viewport.TitleSafeArea.Width, FlxG.graphicsDevice.Viewport.TitleSafeArea.Height);
             FlxCamera defaultCam = new FlxCamera(0, 0, FlxG.graphics.PreferredBackBufferWidth, FlxG.graphics.PreferredBackBufferHeight);
             FlxG.addCamera(defaultCam);
+
+            //Thread tCreate = new Thread(FlxG.state.create);
+            //tCreate.Start();
 
             //create state last
             FlxG.state.create();

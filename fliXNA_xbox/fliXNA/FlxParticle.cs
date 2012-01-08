@@ -29,6 +29,7 @@ namespace fliXNA_xbox
         public FlxPoint minSpeed;
         public FlxPoint maxSpeed;
         private float rotateBy;
+        private FlxRect particleRect;
 
 		/**
 		 * How long this particle lives before it disappears.
@@ -55,6 +56,7 @@ namespace fliXNA_xbox
             rotateBy = 0;
             minSpeed = new FlxPoint();
             maxSpeed = new FlxPoint();
+            particleRect = null;
 		}
 
 		/**
@@ -145,11 +147,12 @@ namespace fliXNA_xbox
                 FlxRect textureArea = new FlxRect(i * height, 0, width, height);
                 _draws.Add(textureArea);
             }
+            int di;// = (int)Math.Round(FlxU.randomBetween(0, numFrames));
             Random r = new Random();
-            int di = (int)r.Next(0, numFrames);
-            //FlxG.log("di "+di);
-            FlxRect t = _draws[di];
-            sourceRect = new FlxRect(t.x, t.y, t.width, t.height);
+            di = r.Next(numFrames);
+            particleRect = _draws[di];
+            //FlxRect t = _draws[di];
+            sourceRect = new FlxRect(particleRect.x, particleRect.y, particleRect.width, particleRect.height);
             return this;
         }
 

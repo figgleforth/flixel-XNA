@@ -147,7 +147,8 @@ namespace fliXNA_xbox
         internal static float randomBetween(int Min, int Max)
         {
             Random r = new Random();
-            return (float)r.Next(Min, Max);
+            return r.Next(Min, Max);
+            //return (float)r.Next(Min, Max);
         }
 
         /// <summary>

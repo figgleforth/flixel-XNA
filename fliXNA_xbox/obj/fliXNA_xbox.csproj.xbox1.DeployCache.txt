@@ -1,15 +1,15 @@
 c7c3cf8dbd174ef7a02629fe52dcf646
 0
 xbox1
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\
-129703654440000000
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\GameThumbnail.png
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\
+129705272500000000
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\GameThumbnail.png
 2012-01-06T23:09:14.4873047Z
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\fliXNA_xbox.exe
-2012-01-08T02:33:34.1259765Z
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\ConsoleFont.xnb
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\fliXNA_xbox.exe
+2012-01-08T20:21:40.6250000Z
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\ConsoleFont.xnb
 2012-01-06T23:19:32.2509765Z
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\default.xnb
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\default.xnb
 2012-01-06T23:18:07.2353515Z
-c:\users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\footsteps.xnb
+C:\Users\bojan\documents\visual studio 2010\Projects\fliXNA_xbox\fliXNA_xbox\fliXNA_xbox\bin\Xbox 360\Debug\Content\footsteps.xnb
 2012-01-08T01:42:22.0029297Z
