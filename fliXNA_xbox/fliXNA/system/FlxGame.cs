@@ -28,12 +28,13 @@ namespace fliXNA_xbox
         /// <param name="Width">The width of the screen</param>
         /// <param name="Height">The height of the screen</param>
         /// <param name="ContentRootDirectory">The directory of your content.  It is set automatically by default but you can change it if you want to.</param>
-        public FlxGame(FlxState State, int Width = 1280, int Height = 720, string ContentRootDirectory = "Content") : base()
+        public FlxGame(FlxState State, int Width = 1280, int Height = 720, float Zoom = 1.0f, string ContentRootDirectory = "Content") : base()
         {
             FlxG.state = State;
+            FlxG.zoom = Zoom;
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = Width;
-            graphics.PreferredBackBufferHeight = Height;
+            graphics.PreferredBackBufferWidth = Width / (int)Zoom;
+            graphics.PreferredBackBufferHeight = Height / (int)Zoom;
             graphics.ApplyChanges();
             Content.RootDirectory = ContentRootDirectory;
         }

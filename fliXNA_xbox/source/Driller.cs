@@ -16,11 +16,12 @@ namespace fliXNA_xbox
     public class Driller : FlxState
     {
         private FlxSprite blackout;
-        private FlxSprite houseSprite;
         private Player p;
 
         private FlxGroup houseBases;    //will contain the sprite for the floors of each house
         private FlxGroup houseRooves;   //will contain rooves
+
+        private Building house1;
 
         public override void create()
         {
@@ -30,18 +31,32 @@ namespace fliXNA_xbox
             houseRooves = new FlxGroup();
 
             FlxG.bgColor = FlxColor.INDIGO;
+
+            p = new Player(200, 200);
+            add(p.footsteps);
+
             blackout = new FlxSprite();
             blackout.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
             blackout.visible = false;
             add(blackout);
 
-            houseSprite = new FlxSprite(500, 500);
-            houseSprite.makeGraphic(800, 800, FlxColor.BROWN);
-            add(houseSprite);
+            add(houseBases);
 
-            p = new Player(200, 200);
-            add(p.footsteps);
+            //houseSprite = new FlxSprite(500, 500);
+            //houseSprite.makeGraphic(800, 800, FlxColor.BROWN);
+            //add(houseSprite);
+
+            
+            
             add(p);
+
+            add(houseRooves);
+
+            //add(house1);
+            house1 = new Building(0, 0, 600, 600, p, blackout);
+            houseBases.add(house1);
+            houseRooves.add(house1.roof);
+
 
 
 
@@ -74,16 +89,16 @@ namespace fliXNA_xbox
         {
             blackout.x = FlxG.camera.scroll.x;
             blackout.y = FlxG.camera.scroll.y;
-            if (!FlxG.overlap(houseSprite, p))
-            {
-                blackout.visible = false;
-                p.indoors = false;
-            }
-            else
-            {
-                blackout.visible = true;
-                p.indoors = true;
-            }
+            //if (!FlxG.overlap(houseSprite, p))
+            //{
+            //    blackout.visible = false;
+            //    p.indoors = false;
+            //}
+            //else
+            //{
+            //    blackout.visible = true;
+            //    p.indoors = true;
+            //}
         }
 
     }

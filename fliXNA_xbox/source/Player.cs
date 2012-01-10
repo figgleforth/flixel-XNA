@@ -29,7 +29,7 @@ namespace fliXNA_xbox
         {
             maxVelocity = new FlxPoint(100, 100);
             drag = new FlxPoint(500, 500);
-            makeGraphic(40, 40, FlxColor.WHITE);
+            makeGraphic(40, 40, FlxColor.CADETBLUE);
 
             _currPos = new FlxPoint(x, y);
             _lastPos = new FlxPoint(x, y);

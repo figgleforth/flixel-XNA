@@ -387,7 +387,7 @@ namespace fliXNA_xbox
             FlxG.console = new FlxConsole();
             FlxG.worldBounds = new FlxRect();
             FlxG.defaultFont = FlxG.content.Load<SpriteFont>("ConsoleFont");
-            FlxG.zoom = 1f;
+            //FlxG.zoom = 1f;
             FlxG.rotation = 0f;
             FlxG.pad1 = new FlxGamepad(PlayerIndex.One);
             FlxG.pad2 = new FlxGamepad(PlayerIndex.Two);
@@ -396,7 +396,7 @@ namespace fliXNA_xbox
             FlxG.keys = new FlxKeyboard();
             FlxG.mouse = new FlxMouse();
             FlxG.safeZone = new FlxRect(FlxG.graphicsDevice.Viewport.TitleSafeArea.X, FlxG.graphicsDevice.Viewport.TitleSafeArea.Y, FlxG.graphicsDevice.Viewport.TitleSafeArea.Width, FlxG.graphicsDevice.Viewport.TitleSafeArea.Height);
-            FlxCamera defaultCam = new FlxCamera(0, 0, FlxG.graphics.PreferredBackBufferWidth, FlxG.graphics.PreferredBackBufferHeight);
+            FlxCamera defaultCam = new FlxCamera(0, 0, FlxG.graphics.PreferredBackBufferWidth, FlxG.graphics.PreferredBackBufferHeight, FlxG.zoom);
             FlxG.addCamera(defaultCam);
 
             //Thread tCreate = new Thread(FlxG.state.create);

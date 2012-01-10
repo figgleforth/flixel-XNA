@@ -91,7 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Indoor.cs" />
+    <Compile Include="source\Building.cs" />
     <Compile Include="source\AI.cs" />
     <Compile Include="fliXNA\system\FlxAnim.cs" />
     <Compile Include="fliXNA\FlxBasic.cs" />
@@ -125,7 +125,6 @@
     <Compile Include="fliXNA\FlxTileblock.cs" />
     <Compile Include="source\Player.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="source\TestHouse.cs" />
     <Compile Include="source\TitleState.cs" />
     <Compile Include="source\ZeldaCam.cs" />
   </ItemGroup>
