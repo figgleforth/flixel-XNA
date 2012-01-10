@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace fliXNA_xbox
 {
-    public class Driller : FlxState
+    public class Sandbox1 : FlxState     //hide the map when "indoors"
     {
         private FlxSprite blackout;
         private Player p;
@@ -42,23 +42,13 @@ namespace fliXNA_xbox
 
             add(houseBases);
 
-            //houseSprite = new FlxSprite(500, 500);
-            //houseSprite.makeGraphic(800, 800, FlxColor.BROWN);
-            //add(houseSprite);
-
-            
-            
             add(p);
 
             add(houseRooves);
 
-            //add(house1);
             house1 = new Building(0, 0, 600, 600, p, blackout);
             houseBases.add(house1);
             houseRooves.add(house1.roof);
-
-
-
 
             FlxG.camera.follow(p, FlxCamera.STYLE_TOPDOWN);
         }
@@ -68,37 +58,8 @@ namespace fliXNA_xbox
         public override void update()
         {
             base.update();
-            onPlayer();
-            //if (houseSprite.overlaps(p))
-            //    house.inside = true;
-            //else
-            //    house.inside = false;
-           
-
-        }
-
-        public bool interactWithMap(FlxObject player, FlxObject map)
-        {
-
-
-
-            return true;
-        }
-
-        private void onPlayer()
-        {
             blackout.x = FlxG.camera.scroll.x;
             blackout.y = FlxG.camera.scroll.y;
-            //if (!FlxG.overlap(houseSprite, p))
-            //{
-            //    blackout.visible = false;
-            //    p.indoors = false;
-            //}
-            //else
-            //{
-            //    blackout.visible = true;
-            //    p.indoors = true;
-            //}
         }
 
     }

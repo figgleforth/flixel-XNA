@@ -7,7 +7,7 @@ namespace fliXNA_xbox
     {
         static void Main(string[] args)
         {
-            using (FlxGame game = new FlxGame(new Driller(), 1280, 720, 1f))
+            using (FlxGame game = new FlxGame(new Sandbox1(), 1280, 720, 1f))
             {
                 game.Run();
             }
