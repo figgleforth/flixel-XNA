@@ -379,8 +379,8 @@ namespace fliXNA_xbox
             FlxG.defaultWholeScreenViewport = FlxG.viewport;
             FlxG.cameras = new List<FlxCamera>();
             FlxG.viewports = new List<Viewport>();
-            FlxG.width = FlxG.graphics.PreferredBackBufferWidth;
-            FlxG.height = FlxG.graphics.PreferredBackBufferHeight;
+            //FlxG.width = FlxG.graphics.PreferredBackBufferWidth;
+            //FlxG.height = FlxG.graphics.PreferredBackBufferHeight;
             FlxG.bgColor = Color.Black;
             FlxG.mute = false;
             FlxG.sounds = new FlxGroup();
@@ -396,7 +396,7 @@ namespace fliXNA_xbox
             FlxG.keys = new FlxKeyboard();
             FlxG.mouse = new FlxMouse();
             FlxG.safeZone = new FlxRect(FlxG.graphicsDevice.Viewport.TitleSafeArea.X, FlxG.graphicsDevice.Viewport.TitleSafeArea.Y, FlxG.graphicsDevice.Viewport.TitleSafeArea.Width, FlxG.graphicsDevice.Viewport.TitleSafeArea.Height);
-            FlxCamera defaultCam = new FlxCamera(0, 0, FlxG.graphics.PreferredBackBufferWidth, FlxG.graphics.PreferredBackBufferHeight, FlxG.zoom);
+            FlxCamera defaultCam = new FlxCamera(0, 0, FlxG.width, FlxG.height, FlxG.zoom);
             FlxG.addCamera(defaultCam);
 
             //Thread tCreate = new Thread(FlxG.state.create);
